@@ -9,8 +9,7 @@ const connection = async () => {
   try {
     // * connection:
 
-    // await mongoose.connect("mongodb://localhost:27018/heroesApp2");
-    await mongoose.connect(`${process.env.MONGO_URI}`);
+    await mongoose.connect(process.env.MONGO_URI);
 
     console.log("Connection to DB has been established!");
   } catch (error) {

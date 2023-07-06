@@ -25,6 +25,6 @@ app.use("/api/hero", heroRoutes);
 app.use("/api/follow", followRoutes);
 
 // * port listening:
-app.listen(port, () => {
-  console.log(`server listening on port ${port}!`);
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`server is listening!`);
 });
